@@ -1,0 +1,30 @@
+# @name get-prompt
+GET http://127.0.0.1:3333/prompts
+
+###
+
+# @name get-hello
+GET http://127.0.0.1:3333/
+
+###
+
+# @name post-videos
+POST http://127.0.0.1:3333/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="example.mp3"
+Content-Type: audio/mpeg
+
+< ./example.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# @name transcription
+POST http://127.0.0.1:3333/videos/dc5e4f85-168b-4cb0-9e2d-4c496138a731/transcription
+Content-Type: application/json
+
+{
+  "prompt":"Examplemp3 man"
+}
