@@ -28,3 +28,15 @@ Content-Type: application/json
 {
   "prompt":"Examplemp3 man"
 }
+
+###
+
+# @name ai-completion
+POST http://127.0.0.1:3333/ai/complete
+Content-Type: application/json
+
+{
+"videoId":"dc5e4f85-168b-4cb0-9e2d-4c496138a731",
+"template":"Create a sucint summary of the following video:'''{transcription}'''",
+"temperature": 0.5
+}
