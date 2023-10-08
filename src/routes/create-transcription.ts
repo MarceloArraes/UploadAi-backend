@@ -16,7 +16,9 @@ export const createTranscriptionRoute = async (app: FastifyInstance) => {
       prompt: z.string(),
     });
 
-    const { prompt } = bodySchema.parse(req.body);
+    const bodyParsed = bodySchema.parse(req.body);
+    let prompt = bodyParsed?.prompt ? bodyParsed.prompt : "";
+
     const video = await prisma.video.findUniqueOrThrow({
       where: {
         id: videoId,
