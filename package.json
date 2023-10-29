@@ -10,20 +10,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "prisma":{
-    "seed":"tst prisma/seed.ts"
-},
   "devDependencies": {
     "@types/node": "^20.8.8",
     "dotenv": "^16.3.1",
-    "prisma": "^5.3.1",
+    "prisma": "^5.5.2",
     "tsx": "^3.13.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@fastify/cors": "^8.4.0",
     "@fastify/multipart": "^7.7.3",
-    "@prisma/client": "^5.3.1",
+    "@prisma/client": "^5.5.2",
     "ai": "^2.2.19",
     "fastify": "^4.23.2",
     "openai": "^4.11.0",
