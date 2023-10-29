@@ -9,7 +9,7 @@ import { generateAiCompletionRoute } from "./routes/generate-ai-completion";
 const app = fastify();
 
 app.register(fastifyCors, {
-  origin: "*",
+  origin: "https://upload-ia-marcelo.vercel.app",
 });
 app.register(getAllPromptsRoutes);
 app.register(uploadVideoRoute);
